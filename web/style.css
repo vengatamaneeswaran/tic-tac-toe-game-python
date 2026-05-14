@@ -1,0 +1,128 @@
+/* Step 2: Modern Styling */
+
+/* 1. Reset default browser margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Page Background and Font */
+body {
+    background-color: #121212; /* Sleek dark mode background */
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    display: flex; /* Centers the game container horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 3. The Game Box */
+.game-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Soft drop shadow */
+    text-align: center;
+    width: 400px;
+}
+
+/* 4. Title Gradient */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    /* Create a cool blue-to-red gradient for the text */
+    background: linear-gradient(90deg, #0074D9, #FF4136);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #aaaaaa;
+    height: 24px;
+}
+
+/* 5. The Grid System (CSS Grid) */
+.board {
+    display: grid;
+    /* This creates 3 equal columns! */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 30px;
+}
+
+/* 6. Individual Cells (Buttons) */
+.cell {
+    background-color: #2a2a2a;
+    height: 100px;
+    border-radius: 15px;
+    display: flex; /* Centers the X or O inside the cell */
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Smooth animation for hover */
+}
+
+/* Hover effect: make it pop out slightly when the mouse is over it! */
+.cell:hover {
+    background-color: #3a3a3a;
+    transform: scale(1.05); 
+}
+
+/* Once a cell is taken, disable the hover effect */
+.cell.taken {
+    cursor: default;
+}
+.cell.taken:hover {
+    transform: scale(1);
+    background-color: #2a2a2a;
+}
+
+/* 7. Player Colors (Added via JavaScript later) */
+.cell.x {
+    color: #0074D9; /* Vibrant Blue */
+    text-shadow: 0 0 15px rgba(0, 116, 217, 0.4); /* Glowing text! */
+}
+
+.cell.o {
+    color: #FF4136; /* Vibrant Red */
+    text-shadow: 0 0 15px rgba(255, 65, 54, 0.4);
+}
+
+/* 8. Win/Tie States */
+.cell.win {
+    background-color: #2ECC40; /* Green */
+    color: white;
+    text-shadow: none;
+    transform: scale(1.05); /* Make the winning cells pop */
+}
+
+.cell.tie {
+    background-color: #FF851B; /* Orange */
+    color: white;
+    text-shadow: none;
+}
+
+/* 9. Reset Button Styling */
+.reset-btn {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}

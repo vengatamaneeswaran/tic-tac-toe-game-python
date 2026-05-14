@@ -19,8 +19,14 @@ This version takes the game out of the terminal and into its own window! You pla
 - **Concepts Learned:** Object-Oriented Programming (Classes & `__init__`), the `tkinter` library, creating graphical widgets (`Button`), Event-Driven Programming (triggering functions on clicks), and pop-up `messagebox` dialogs.
 - **How to Run:** `python gui_tic_tac_toe.py`
 
+### 4. Web Browser Version (`web/`)
+This version ports our Python logic into a beautiful, vibrant web application using HTML, CSS, and JavaScript. It features sleek animations, a dark mode aesthetic, and a smart AI!
+- **Concepts Learned:** HTML Structure (DOM), Modern CSS Styling (Grid, Flexbox, Hover Transitions, Gradients), and JavaScript Logic (Event Listeners, DOM Manipulation, Timers).
+- **How to Run:** Open the `web/index.html` file directly in any web browser by double-clicking it.
+
 ## 🛠️ Prerequisites
-- You only need Python installed on your computer! No external libraries are required, as `tkinter` and `random` are built right into standard Python.
+- For the Python versions, you only need Python installed on your computer! No external libraries are required, as `tkinter` and `random` are built right into standard Python.
+- For the Web version, you only need a web browser!
 
 ## 🚀 How to Play
 1. Clone or download this repository.
